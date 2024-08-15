@@ -62,11 +62,6 @@
 - **Gradient Boosting (XGBoost, LightGBM)**: For feature importance and predictions
 - **Neural Networks**: For capturing complex non-linear relationships
 - **Ensemble Methods**: Combining multiple models for improved accuracy
-- **Bayesian Methods**: For updating probabilities as new data becomes available
-
-### 3.3 Simulation Techniques
-- **Monte Carlo Simulations**: For modeling game and season outcomes
-- **Markov Chain Models**: For modeling possession-based sports (basketball, football)
 
 ### 3.4 Feature Engineering
 - **Moving Averages**: Recent performance trends
