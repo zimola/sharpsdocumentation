@@ -1,49 +1,102 @@
-# 1.0 APIs & Data Sources
+# Sports Betting Algorithms: Quick Reference Guide
 
-## 1.1 MLB
-- **Pybaseball**: A Python library for accessing baseball data from the MLB.
+## 1. Data Sources and APIs
 
-## 1.2 NBA
-- **nba_api**: A Python library that provides access to NBA data, including game and player statistics.
+### 1.1 Major League APIs
+- **MLB**: Pybaseball (Python library for MLB data)
+- **NBA**: nba_api (Python library for NBA statistics)
+- **NFL**: nflgame (Python library for NFL data)
+- **NHL**: nhl_api (Python library for NHL statistics)
 
-## 1.3 Historical Odds
-- **(Note)**: Include relevant sources or tools for accessing historical betting odds data.
+### 1.2 Odds and Betting Data
+- **OddsAPI**: Historical and real-time betting odds
+- **The Odds API**: Historical odds data with line movements
+- **Sportradar**: Comprehensive sports data, including odds and player statistics
+- **Statsperform**: Advanced analytics and data for multiple sports
 
-# 2.0 Companies
+### 1.3 Additional Data Sources
+- **Sports Reference**: Extensive statistical databases for multiple sports
+- **FiveThirtyEight**: Sports predictions and ELO ratings
+- **Rotowire**: Player news, injury updates, and projections
 
-## 2.1 Data/Analytics Companies
-- **Unabated**: A platform that provides sports betting tools and analytics.
-- **Props.cash**: A service that offers detailed player prop data and analysis.
-- **SABR/SABR Metrics**: The Society for American Baseball Research, known for its statistical analysis and historical research.
+## 2. Key Metrics and Advanced Stats
 
-## 2.2 Sportsbooks
-- **DraftKings Sportsbook**
-- **FanDuel Sportsbook**
-- **Bet365**
-- **William Hill**
-- **BetMGM**
-- **Caesars Sportsbook**
-- **PointsBet**
-- **Unibet**
-- **Betfair**
-- **Pinnacle**
+### 2.1 Cross-Sport Metrics
+- **ELO Ratings**: Team strength indicator based on game outcomes
+- **SRS (Simple Rating System)**: Point differential and strength of schedule metric
+- **Pythagorean Expectation**: Expected win percentage based on points scored/allowed
 
-# 3.0 Lessons Learned
+### 2.2 NBA-Specific
+- **Net Rating**: Team's point differential per 100 possessions
+- **True Shooting Percentage (TS%)**: Shooting efficiency including all shot types
+- **Usage Rate**: Percentage of team plays used by a player
+- **RAPM (Regularized Adjusted Plus-Minus)**: Player's impact adjusted for teammates and opponents
 
-## 3.1 Modeling
-- **ELO Bias**: Recognize potential biases when using ELO ratings in modeling sports outcomes.
+### 2.3 MLB-Specific
+- **wOBA (Weighted On-Base Average)**: Comprehensive offensive metric
+- **FIP (Fielding Independent Pitching)**: Pitcher performance independent of fielding
+- **WAR (Wins Above Replacement)**: Player's total contribution to their team
+- **Statcast Data**: Exit velocity, launch angle, spin rate, etc.
 
-## 3.2 Line Movement/Betting
-- **Popular Games**: Betting patterns often focus on popular games.
-- **Betting Tendencies**: People tend to bet on positive outcomes, such as overs, or on teams/players they favor.
+### 2.4 NFL-Specific
+- **DVOA (Defense-adjusted Value Over Average)**: Team efficiency compared to league average
+- **EPA (Expected Points Added)**: Value of a play based on down, distance, and field position
+- **QBR (Quarterback Rating)**: Comprehensive quarterback performance metric
+- **CPOE (Completion Percentage Over Expected)**: Quarterback accuracy adjusted for throw difficulty
 
-# 4.0 Advanced Stats
+### 2.5 NHL-Specific
+- **Corsi and Fenwick**: Shot attempt differentials
+- **PDO**: Sum of shooting percentage and save percentage
+- **Expected Goals (xG)**: Goal probability based on shot quality
+- **Game Score**: Single-number measure of a player's game performance
 
-## 4.1 Sports Specific
-- **ELO**: A rating system used to calculate the relative skill levels of players or teams in various sports.
-- **Pythagorean Expectation**: A formula used to estimate a team's expected wins based on the number of runs scored and allowed.
+## 3. Modeling Techniques and Considerations
 
-## 4.2 Time Series
-- **Hurst Exponent**: A measure used to evaluate the long-term memory of time series data.
-- **Fractal Number**: A statistic that quantifies the complexity or roughness of a time series.
-- **Entropy**: A concept from information theory and statistical mechanics, indicating the level of disorder or unpredictability in a system, often applied in time series analysis to measure uncertainty.
+### 3.1 Time Series Analysis
+- **Hurst Exponent**: Long-term memory of time series data
+- **Entropy**: Measure of uncertainty in a system
+- **ARIMA Models**: For forecasting time series data
+- **Kalman Filters**: For tracking and predicting player/team performance over time
+
+### 3.2 Machine Learning Approaches
+- **Gradient Boosting (XGBoost, LightGBM)**: For feature importance and predictions
+- **Neural Networks**: For capturing complex non-linear relationships
+- **Ensemble Methods**: Combining multiple models for improved accuracy
+- **Bayesian Methods**: For updating probabilities as new data becomes available
+
+### 3.3 Simulation Techniques
+- **Monte Carlo Simulations**: For modeling game and season outcomes
+- **Markov Chain Models**: For modeling possession-based sports (basketball, football)
+
+### 3.4 Feature Engineering
+- **Moving Averages**: Recent performance trends
+- **Home/Away Splits**: Capturing venue impact
+- **Head-to-Head History**: Past performance against specific opponents
+- **Rest Days**: Impact of schedule on performance
+- **Weather Data**: Especially important for MLB and NFL
+
+## 4. Common Pitfalls and Considerations
+
+### 4.1 Data-Related Issues
+- **Sample Size**: Ensure sufficient data for reliable conclusions
+- **Data Quality**: Verify data accuracy and consistency
+- **Multicollinearity**: Be aware of highly correlated features
+- **Outliers**: Properly handle extreme values or performances
+
+### 4.2 Modeling Gotchas
+- **Overfitting**: Avoid models that are too complex for the available data
+- **Regression to the Mean**: Account for extreme performances likely reverting to average
+- **Survivor Bias**: Be cautious of datasets that exclude retired players or relegated teams
+- **Autocorrelation**: Account for time-dependent correlations in time series data
+
+### 4.3 Betting Market Dynamics
+- **Line Movements**: Understand the causes and implications of odds changes
+- **Public Betting Percentages**: Consider the impact of public opinion on lines
+- **Sharp Money**: Be aware of significant bets from professional bettors
+- **Arbitrage Opportunities**: Look for discrepancies between different sportsbooks
+
+### 4.4 Sport-Specific Considerations
+- **Injuries and Lineups**: Especially crucial in NBA and NFL
+- **Pitching Rotations**: vital for MLB betting
+- **Back-to-Back Games**: Important factor in NBA and NHL
+- **Playoff vs. Regular Season**: Adjusting models for postseason dynamics
